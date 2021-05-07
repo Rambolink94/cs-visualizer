@@ -1,0 +1,64 @@
+@import "./variables/color";
+@import "./variables/sizing";
+@import "./variables/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-header {
+  width: 100%;
+  height: $header-height;
+  background-color: black;
+}
+
+.main-nav {
+  height: 100%;
+
+  ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .active-nav {
+      background: $primary-color;
+      padding: 0 10px;
+      color: black;
+    }
+
+    li {
+      margin-right: 50px;
+      list-style-type: none;
+      height: 100%;
+      display: flex;
+
+      a {
+        text-decoration: none;
+        margin: auto;
+        color: white;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.v-parent {
+  height: calc(100vh - #{$header-height} - #{$small-footer-height});
+  width: 100%;
+}
+
+.small-footer {
+  height: $small-footer-height;
+  background-color: gray;
+}

@@ -1,0 +1,103 @@
+@import "./variables/color";
+@import "./variables/sizing";
+@import "./variables/textures";
+
+.v-tools {
+  position: absolute;
+  top: 0;
+  background-color: $sub-bar-color;
+  border-bottom: 2px solid $sub-bar-border;
+  height: $tools-height;
+  width: 100%;
+  z-index: 1000;
+}
+
+.v-options {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $sub-bar-color;
+  border-right: 2px solid $sub-bar-border;
+  height: 100%;
+  width: $options-width;
+  z-index: 1001;
+}
+
+.v-view {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  @include dot-matrix();
+}
+
+.node {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border: 2px solid $sub-bar-border;
+  padding: 20px 30px;
+  top: 50%;
+  left: 50%;
+
+  .node-data {
+  }
+
+  .node-type {
+    color: $primary-color;
+    letter-spacing: 5px;
+  }
+
+  .socket-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .socket {
+      background-color: white;
+      position: absolute;
+      width: $socket-width;
+      height: $socket-width;
+
+      border: 2px solid $primary-color;
+    }
+
+    .input {
+    }
+
+    .output {
+      border-radius: 50%;
+    }
+
+    /* Positions */
+    .socket-right {
+      top: 50%;
+      right: -$socket-width / 2;
+      transform: translateY(-50%);
+    }
+
+    .socket-left {
+      top: 50%;
+      left: -$socket-width / 2;
+      transform: translateY(-50%);
+    }
+
+    .socket-top {
+      top: -$socket-width / 2;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .socket-bottom {
+      bottom: -$socket-width / 2;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

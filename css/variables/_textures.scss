@@ -1,0 +1,21 @@
+$matrix-background-color: white;
+$dot-color: black;
+
+$dot-size: 1px;
+$dot-space: 22px;
+
+@mixin dot-matrix {
+  background: linear-gradient(
+        90deg,
+        $matrix-background-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient(
+        $matrix-background-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
+}

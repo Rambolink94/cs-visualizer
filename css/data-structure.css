@@ -1,0 +1,110 @@
+.v-tools {
+  position: absolute;
+  top: 0;
+  background-color: #ebedee;
+  border-bottom: 2px solid #bebebe;
+  height: 50px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.v-options {
+  position: absolute;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ebedee;
+  border-right: 2px solid #bebebe;
+  height: 100%;
+  width: 50px;
+  z-index: 1001;
+}
+
+.v-view {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, white 21px, transparent 1%) center, linear-gradient(white 21px, transparent 1%) center, black;
+  background-size: 22px 22px;
+}
+
+.node {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #bebebe;
+  padding: 20px 30px;
+  top: 50%;
+  left: 50%;
+}
+
+.node .node-type {
+  color: #ff9f20;
+  letter-spacing: 5px;
+}
+
+.node .socket-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Positions */
+}
+
+.node .socket-holder .socket {
+  background-color: white;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ff9f20;
+}
+
+.node .socket-holder .output {
+  border-radius: 50%;
+}
+
+.node .socket-holder .socket-right {
+  top: 50%;
+  right: -6px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.node .socket-holder .socket-left {
+  top: 50%;
+  left: -6px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.node .socket-holder .socket-top {
+  top: -6px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.node .socket-holder .socket-bottom {
+  bottom: -6px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*# sourceMappingURL=data-structure.css.map */
