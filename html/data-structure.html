@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/data-structure.css">
+
+    <script src="../javascript/data-structure-view.js" defer></script>
+    <script src="../javascript/floating-tool-util.js" defer></script>
     <title>CS-Visualizer</title>
 </head>
 <body>
@@ -21,10 +24,33 @@
     </header>
     <main class="v-parent">
         
-        <div class="v-view">
-            <div class="v-options"></div>
-            <div class="v-tools"></div>
+        <div id="v-view" class="v-view">
+            <div class="v-options">
+                <button id="new-node" class="util-button">New Node</button>
+            </div>
+
+            <div class="v-tools">
+                <button class="selected util-button">Linked List</button>
+            </div>
+
+            <div id="new-node-tool" class="floating-tool" style="display: none;">
+                <h3 class="floating-tool-title">New Node</h3>
+                <input type="text" name="node-data" id="node-data-field" placeholder="data">
+                <input type="text" name="node-type" id="node-type-field" placeholder="type">
+                <button id="create-node" class="floating-tool-button">Create</button>
+                <span id="x-button" class="floating-tool-x-button"><img src="../images/x-button.png" alt=""></span>
+            </div>
             
+            <div class="node">
+                <h2 class="node-data">Info</h2>
+                <strong class="node-type">Type</strong>
+                <div class="socket-holder">
+                    <span class="socket socket-top input"></span>
+                    <span class="socket socket-left output"></span>
+                    <span class="socket socket-right input"></span>
+                    <span class="socket socket-bottom output"></span>
+                </div>
+            </div>
             <div class="node">
                 <h2 class="node-data">Info</h2>
                 <strong class="node-type">Type</strong>
@@ -37,6 +63,6 @@
             </div>
         </div>
     </main>
-    <footer class="small-footer"></footer>
+    <!-- <footer class="small-footer"></footer> -->
 </body>
 </html>

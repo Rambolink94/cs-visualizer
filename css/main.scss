@@ -16,9 +16,12 @@ body {
 }
 
 .main-header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: $header-height;
   background-color: black;
+  z-index: 1100;
 }
 
 .main-nav {
@@ -54,7 +57,7 @@ body {
 }
 
 .v-parent {
-  height: calc(100vh - #{$header-height} - #{$small-footer-height});
+  height: 100%;
   width: 100%;
 }
 
